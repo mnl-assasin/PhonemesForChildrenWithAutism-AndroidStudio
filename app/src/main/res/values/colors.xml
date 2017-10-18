@@ -6,4 +6,6 @@
     <color name="black">#000</color>
 
     <color name="windowBackground">#fff</color>
+    <color name="textColorLight">#fff</color>
+    <color name="textColorDark">#000</color>
 </resources>

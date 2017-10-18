@@ -9,7 +9,9 @@
     tools:context="com.pguese.pfcwa.activity.MenuActivity">
 
     <com.pguese.pfcwa.widgets.TextViewCG
-        android:layout_width="wrap_content" android:textSize=""
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alphabet"
+        android:textSize="@dimen/defaultTextSize" />
 
 </LinearLayout>
