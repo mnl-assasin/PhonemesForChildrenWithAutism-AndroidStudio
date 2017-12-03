@@ -7,6 +7,15 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:textColor">@color/textColorDark</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+    </style>
+
+    <style name="ButtonStyle" parent="@android:style/Widget.Button">
+
+        <item name="android:background">@drawable/button_normal</item>
+        <item name="android:width">@dimen/button_default_width</item>
+        <item name="android:height">@dimen/button_default_height</item>
+
     </style>
 
 </resources>

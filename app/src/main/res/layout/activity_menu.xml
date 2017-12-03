@@ -8,10 +8,19 @@
     android:orientation="vertical"
     tools:context="com.pguese.pfcwa.activity.MenuActivity">
 
-    <com.pguese.pfcwa.widgets.TextViewCG
+    <com.pguese.pfcwa.widgets.ButtonCG
+        android:id="@+id/btnFC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alphabet"
-        android:textSize="@dimen/defaultTextSize" />
+        android:layout_marginBottom="16dp"
+        android:text="Flash Cards"
+        android:textSize="@dimen/textSizeNormal" />
+
+    <com.pguese.pfcwa.widgets.ButtonCG
+        android:id="@+id/btnAD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auditory Discrimination"
+        android:textSize="@dimen/textSizeNormal" />
 
 </LinearLayout>
