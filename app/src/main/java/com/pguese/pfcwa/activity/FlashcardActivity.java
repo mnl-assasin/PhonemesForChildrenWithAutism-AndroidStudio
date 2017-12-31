@@ -1,16 +1,18 @@
 package com.pguese.pfcwa.activity;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.pguese.pfcwa.R;
+import com.pguese.pfcwa.utils.MediaPlayerHelper;
 import com.pguese.pfcwa.data.Const;
-import com.pguese.pfcwa.data.DatabaseHelper;
+import com.pguese.pfcwa.data.Flashcards;
+import com.pguese.pfcwa.model.FlashcardItem;
 import com.pguese.pfcwa.widgets.TextViewCG;
+import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,9 +22,6 @@ public class FlashcardActivity extends BaseActivity {
 
     String TAG = FlashcardActivity.class.getSimpleName();
 
-    DatabaseHelper dbHelper;
-    SQLiteDatabase db;
-    Cursor cursor;
     @BindView(R.id.ivBack)
     ImageView ivBack;
     @BindView(R.id.ivSpeak)
@@ -38,6 +37,12 @@ public class FlashcardActivity extends BaseActivity {
     @BindView(R.id.ivFlashcard)
     ImageView ivFlashcard;
 
+
+    List<FlashcardItem> flashcards;
+    FlashcardItem flashcard;
+
+    int index;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,22 +54,14 @@ public class FlashcardActivity extends BaseActivity {
 
     private void initData() {
 
-        dbHelper = DatabaseHelper.getInstance(this);
-        db = dbHelper.getReadableDatabase();
+        index = getIntent().getIntExtra(Const.KEY_INDEX, 0);
+        flashcards = Flashcards.getFlashcard(index);
 
-        int index = getIntent().getIntExtra(Const.KEY_INDEX, 0);
+        Picasso.with(this).load(flashcards.get(0).getDrawable()).into(ivFC1);
+        Picasso.with(this).load(flashcards.get(1).getDrawable()).into(ivFC2);
+        Picasso.with(this).load(flashcards.get(2).getDrawable()).into(ivFC3);
 
-//        cursor = db.query(DatabaseHelper.TBL_FLASHCARDS, new String[]{"id"}, "id=" + index, null, null, null, "name DESC");
-        cursor = db.query(DatabaseHelper.TBL_FLASHCARDS, null, "id=?", new String[]{String.valueOf(index)}, null, null, "name DESC");
-//        cursor = db.query(DatabaseHelper.TBL_FLASHCARDS, null, null, null, null, null, null);
-
-        if (cursor != null) {
-            Log.d(TAG, "Size: " + cursor.getCount());
-            while (cursor.moveToNext()) {
-                String name = cursor.getString(cursor.getColumnIndex("name"));
-                Log.d(TAG, "Name: " + name);
-            }
-        }
+        displayFlashcard(0);
     }
 
     @OnClick({R.id.ivBack, R.id.ivSpeak, R.id.ivFC1, R.id.ivFC2, R.id.ivFC3})
@@ -74,13 +71,34 @@ public class FlashcardActivity extends BaseActivity {
                 super.onBackPressed();
                 break;
             case R.id.ivSpeak:
+                MediaPlayerHelper.repeat();
                 break;
             case R.id.ivFC1:
+                displayFlashcard(0);
                 break;
             case R.id.ivFC2:
+                displayFlashcard(1);
                 break;
             case R.id.ivFC3:
+                displayFlashcard(2);
                 break;
         }
     }
+
+    private void displayFlashcard(int i) {
+        flashcard = flashcards.get(i);
+        tvFlashcard.setText(flashcard.getName());
+        Picasso.with(this).load(flashcard.getDrawable()).into(ivFlashcard);
+        MediaPlayerHelper.playFlashcard(this, Flashcards.getPlaybackLetter(index), flashcard.getPlayback());
+
+    }
+
+    //    private void play() {
+    //        if (mediaPlayer != null)
+    //            if (mediaPlayer.isPlaying())
+    //                mediaPlayer.stop();
+    //        mediaPlayer.start();
+//    }
+
+
 }

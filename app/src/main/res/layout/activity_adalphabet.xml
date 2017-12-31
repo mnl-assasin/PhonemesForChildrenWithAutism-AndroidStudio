@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pguese.pfcwa.activity.ADMenuActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <com.pguese.pfcwa.widgets.TextViewCG
+            android:id="@+id/tvOption1"
+            android:layout_width="@dimen/flashcard_medium"
+            android:layout_height="@dimen/flashcard_medium"
+            android:background="@drawable/background_black_border"
+            android:padding="@dimen/dp2"
+            android:text="A"  android:gravity="center"
+            android:textSize="@dimen/dp64" />
+
+        <com.pguese.pfcwa.widgets.TextViewCG
+            android:id="@+id/tvOption2"
+            android:layout_width="@dimen/flashcard_medium"
+            android:layout_height="@dimen/flashcard_medium"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp4"
+            android:text="A"  android:gravity="center"
+            android:textSize="@dimen/dp64"
+            android:background="@drawable/background_black_border"
+            android:padding="@dimen/dp2" />
+
+        <com.pguese.pfcwa.widgets.TextViewCG
+            android:id="@+id/tvOption3"
+            android:layout_width="@dimen/flashcard_medium"
+            android:layout_height="@dimen/flashcard_medium"
+            android:text="A"  android:gravity="center"
+            android:textSize="@dimen/dp64"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp8"
+            android:background="@drawable/background_black_border"
+            android:padding="@dimen/dp2" />
+
+        <com.pguese.pfcwa.widgets.TextViewCG
+            android:id="@+id/tvOption4"
+            android:layout_width="@dimen/flashcard_medium"
+            android:text="A"  android:gravity="center"
+            android:textSize="@dimen/dp64"
+            android:layout_height="@dimen/flashcard_medium"
+            android:background="@drawable/background_black_border"
+            android:padding="@dimen/dp2" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/menu_button_default_size"
+        android:layout_height="@dimen/menu_button_default_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="@dimen/menu_button_padding"
+        android:src="@drawable/img_back" />
+
+    <ImageView
+        android:id="@+id/ivSpeak"
+        android:layout_width="@dimen/menu_button_default_size"
+        android:layout_height="@dimen/menu_button_default_size"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp32"
+        android:padding="@dimen/menu_button_padding"
+        android:src="@drawable/img_speak" />
+
+</RelativeLayout>

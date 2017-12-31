@@ -13,6 +13,8 @@ import com.pguese.pfcwa.R;
 
 public class BaseActivity extends AppCompatActivity {
 
+    int ctr;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

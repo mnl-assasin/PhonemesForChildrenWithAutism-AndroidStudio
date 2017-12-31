@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "DB_PFCWA";
-    private static final int DB_VERSION = 6;
+    private static final int DB_VERSION = 9;
 
     public static final String TBL_FLASHCARDS = "tbl_flashcards";
 
@@ -30,18 +30,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS " + TBL_FLASHCARDS + "(id integer, name varchar)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + TBL_FLASHCARDS + "(id integer, name varchar, drawable integer, playback integer)");
         populateData(db);
     }
 
     private void populateData(SQLiteDatabase db) {
 
-        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name) VALUES (0, 'apple')");
-        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name) VALUES (0, 'arrow')");
-        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name) VALUES (0, 'ant')");
-        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name) VALUES (1, 'ball')");
-        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name) VALUES (1, 'basket')");
-        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name) VALUES (1, 'bell')");
+        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name, drawable, playback) VALUES (0, 'apple', R.drawable.fc_apple, R.raw.sample)");
+        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name, drawable, playback) VALUES (0, 'arrow', R.drawable.fc_apple, R.raw.sample)");
+        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name, drawable, playback) VALUES (0, 'ant', R.drawable.fc_apple, R.raw.sample)");
+        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name, drawable, playback) VALUES (1, 'ball', R.drawable.fc_apple, R.raw.sample)");
+        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name, drawable, playback) VALUES (1, 'basket', R.drawable.fc_apple, R.raw.sample)");
+        db.execSQL("INSERT INTO " + TBL_FLASHCARDS + "(id, name, drawable, playback) VALUES (1, 'bell', R.drawable.fc_apple, R.raw.sample)");
 
 
     }

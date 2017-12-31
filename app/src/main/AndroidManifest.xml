@@ -11,16 +11,28 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MenuActivity"
-            android:screenOrientation="sensorLandscape">
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.AlphabetActivity" />
-        <activity android:name=".activity.FlashcardActivity" />
-
+        <activity
+            android:name=".activity.AlphabetActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.FlashcardActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.ADMenuActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.ADAlphabetActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.ADVocabularyActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

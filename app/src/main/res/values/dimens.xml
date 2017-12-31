@@ -2,6 +2,8 @@
 <resources>
 
     <!-- 1DP : 1DP -->
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp4">4dp</dimen>
     <dimen name="dp8">8dp</dimen>
     <dimen name="dp16">16dp</dimen>
     <dimen name="dp24">24dp</dimen>
@@ -10,10 +12,11 @@
     <dimen name="dp64">64dp</dimen>
     <dimen name="dp80">80dp</dimen>
     <dimen name="dp96">96dp</dimen>
+    <dimen name="dp128">126dp</dimen>
     <dimen name="dp256">256dp</dimen>
 
     <!-- 1DP : 1DP -->
-    <dimen name="textSizeNormal">20dp</dimen>
+    <dimen name="textSizeNormal">22dp</dimen>
     <dimen name="textSizeLarge">28dp</dimen>
     <dimen name="textSizeXL">@dimen/dp32</dimen>
 
@@ -23,9 +26,10 @@
     <dimen name="menu_button_default_size">@dimen/dp64</dimen>
     <dimen name="menu_button_padding">@dimen/dp16</dimen>
 
-    <dimen name="flashcard_small_size">@dimen/dp80</dimen>
-    <dimen name="flashcard_big_size">@dimen/dp256</dimen>
+    <dimen name="flashcard_small">@dimen/dp80</dimen>
+    <dimen name="flashcard_medium">@dimen/dp128</dimen>
+    <dimen name="flashcard_big">@dimen/dp256</dimen>
 
-    <dimen name="textSizeFlashcard">@dimen/textSizeLarge</dimen>
+    <dimen name="textSizeFlashcard">@dimen/textSizeXL</dimen>
 
 </resources>

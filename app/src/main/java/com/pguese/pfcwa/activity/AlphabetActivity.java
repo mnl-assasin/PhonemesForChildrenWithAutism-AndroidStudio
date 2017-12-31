@@ -22,7 +22,6 @@ public class AlphabetActivity extends BaseActivity {
     @BindView(R.id.ivBack)
     ImageView ivBack;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pguese.pfcwa.activity.ADVocabularyActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/ivOption1"
+            android:layout_width="@dimen/flashcard_medium"
+            android:layout_height="@dimen/flashcard_medium"
+            android:background="@drawable/background_black_border"
+            android:padding="@dimen/dp2" />
+
+        <ImageView
+            android:id="@+id/ivOption2"
+            android:layout_width="@dimen/flashcard_medium"
+            android:layout_height="@dimen/flashcard_medium"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_marginRight="@dimen/dp4"
+            android:background="@drawable/background_black_border"
+            android:padding="@dimen/dp2" />
+
+        <ImageView
+            android:id="@+id/ivOption3"
+            android:layout_width="@dimen/flashcard_medium"
+            android:layout_height="@dimen/flashcard_medium"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp8"
+            android:background="@drawable/background_black_border"
+            android:padding="@dimen/dp2" />
+
+        <ImageView
+            android:id="@+id/ivOption4"
+            android:layout_width="@dimen/flashcard_medium"
+            android:layout_height="@dimen/flashcard_medium"
+            android:background="@drawable/background_black_border"
+            android:padding="@dimen/dp2" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/menu_button_default_size"
+        android:layout_height="@dimen/menu_button_default_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="@dimen/menu_button_padding"
+        android:src="@drawable/img_back" />
+
+    <ImageView
+        android:id="@+id/ivSpeak"
+        android:layout_width="@dimen/menu_button_default_size"
+        android:layout_height="@dimen/menu_button_default_size"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp32"
+        android:padding="@dimen/menu_button_padding"
+        android:src="@drawable/img_speak" />
+
+</RelativeLayout>

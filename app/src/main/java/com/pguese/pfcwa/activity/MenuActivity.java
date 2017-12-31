@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.pguese.pfcwa.R;
+import com.pguese.pfcwa.utils.MediaPlayerHelper;
 import com.pguese.pfcwa.widgets.ButtonCG;
 
 import butterknife.BindView;
@@ -25,7 +26,9 @@ public class MenuActivity extends BaseActivity {
         ButterKnife.bind(this);
 
 //        startActivity(new Intent(this, FlashcardActivity.class));
+//        MediaPlayerHelper.playFlashcard(this, R.raw.apple, R.raw.arrow);
 
+        startActivity(new Intent(this, ADAlphabetActivity.class));
     }
 
     @OnClick({R.id.btnFC, R.id.btnAD})
@@ -35,6 +38,8 @@ public class MenuActivity extends BaseActivity {
                 startActivity(new Intent(this, AlphabetActivity.class));
                 break;
             case R.id.btnAD:
+                startActivity(new Intent(this, ADMenuActivity.class));
+
                 break;
         }
     }

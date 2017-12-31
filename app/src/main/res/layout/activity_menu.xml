@@ -11,16 +11,16 @@
     <com.pguese.pfcwa.widgets.ButtonCG
         android:id="@+id/btnFC"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp48"
         android:layout_marginBottom="16dp"
-        android:text="Flash Cards"
+        android:text="Flash cards"
         android:textSize="@dimen/textSizeNormal" />
 
     <com.pguese.pfcwa.widgets.ButtonCG
         android:id="@+id/btnAD"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Auditory Discrimination"
+        android:layout_height="@dimen/dp48"
+        android:text="Auditory discrimination"
         android:textSize="@dimen/textSizeNormal" />
 
 </LinearLayout>
