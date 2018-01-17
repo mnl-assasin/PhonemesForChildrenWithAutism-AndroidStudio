@@ -41,13 +41,13 @@ public class BaseActivity extends AppCompatActivity {
             final View decorView = getWindow().getDecorView();
             decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
 
-                        @Override
-                        public void onSystemUiVisibilityChange(int visibility) {
-                            if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
-                                decorView.setSystemUiVisibility(flags);
-                            }
-                        }
-                    });
+                @Override
+                public void onSystemUiVisibilityChange(int visibility) {
+                    if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
+                        decorView.setSystemUiVisibility(flags);
+                    }
+                }
+            });
         }
 
     }

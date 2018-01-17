@@ -1,13 +1,15 @@
 package com.pguese.pfcwa.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.pguese.pfcwa.R;
+import com.pguese.pfcwa.data.BundleKeys;
 import com.pguese.pfcwa.utils.MediaPlayerHelper;
 import com.pguese.pfcwa.data.Const;
-import com.pguese.pfcwa.data.Flashcards;
+import com.pguese.pfcwa.data.FlashcardsHelper;
 import com.pguese.pfcwa.model.FlashcardItem;
 import com.pguese.pfcwa.widgets.TextViewCG;
 import com.squareup.picasso.Picasso;
@@ -17,6 +19,8 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import static com.pguese.pfcwa.data.Const.REQ_HOME;
 
 public class FlashcardActivity extends BaseActivity {
 
@@ -34,9 +38,6 @@ public class FlashcardActivity extends BaseActivity {
     ImageView ivFC3;
     @BindView(R.id.tvFlashcard)
     TextViewCG tvFlashcard;
-    @BindView(R.id.ivFlashcard)
-    ImageView ivFlashcard;
-
 
     List<FlashcardItem> flashcards;
     FlashcardItem flashcard;
@@ -54,19 +55,23 @@ public class FlashcardActivity extends BaseActivity {
 
     private void initData() {
 
-        index = getIntent().getIntExtra(Const.KEY_INDEX, 0);
-        flashcards = Flashcards.getFlashcard(index);
+        index = getIntent().getIntExtra(BundleKeys.KEY_INDEX, 0);
+
+        tvFlashcard.setText(Const.alphabet[index]);
+        flashcards = FlashcardsHelper.getFlashcards(index);
 
         Picasso.with(this).load(flashcards.get(0).getDrawable()).into(ivFC1);
         Picasso.with(this).load(flashcards.get(1).getDrawable()).into(ivFC2);
         Picasso.with(this).load(flashcards.get(2).getDrawable()).into(ivFC3);
 
-        displayFlashcard(0);
     }
 
-    @OnClick({R.id.ivBack, R.id.ivSpeak, R.id.ivFC1, R.id.ivFC2, R.id.ivFC3})
+    @OnClick({R.id.ivHome, R.id.ivBack, R.id.ivSpeak, R.id.ivFC1, R.id.ivFC2, R.id.ivFC3})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.ivHome:
+                setResult(RESULT_OK);
+                finish();
             case R.id.ivBack:
                 super.onBackPressed();
                 break;
@@ -86,19 +91,27 @@ public class FlashcardActivity extends BaseActivity {
     }
 
     private void displayFlashcard(int i) {
-        flashcard = flashcards.get(i);
-        tvFlashcard.setText(flashcard.getName());
-        Picasso.with(this).load(flashcard.getDrawable()).into(ivFlashcard);
-        MediaPlayerHelper.playFlashcard(this, Flashcards.getPlaybackLetter(index), flashcard.getPlayback());
 
+        FlashcardItem item = flashcards.get(i);
+
+        Bundle extras = new Bundle();
+        extras.putInt(BundleKeys.KEY_INDEX, item.getIndex());
+        extras.putString(BundleKeys.KEY_NAME, item.getName());
+        extras.putInt(BundleKeys.KEY_DRAWABLE, item.getDrawable());
+        extras.putInt(BundleKeys.KEY_PLAYBACK, item.getPlayback());
+
+        startActivityForResult(new Intent(this, FlashcardSingleActivity.class).putExtras(extras), REQ_HOME);
     }
 
-    //    private void play() {
-    //        if (mediaPlayer != null)
-    //            if (mediaPlayer.isPlaying())
-    //                mediaPlayer.stop();
-    //        mediaPlayer.start();
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == Const.REQ_HOME && resultCode == RESULT_OK) {
+            setResult(RESULT_OK);
+            finish();
+        }
+    }
 
 
 }

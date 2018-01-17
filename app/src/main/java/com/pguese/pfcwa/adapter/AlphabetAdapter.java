@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.pguese.pfcwa.R;
-import com.pguese.pfcwa.widgets.ColorHelper;
 import com.pguese.pfcwa.widgets.TextViewCG;
 
 import butterknife.BindView;
@@ -61,7 +60,7 @@ public class AlphabetAdapter extends BaseAdapter {
         }
 
 //        holder.textView.setBackgroundResource(rainbowColors[i % 7]);
-        holder.textView.setBackgroundResource(ColorHelper.getRandomColor());
+//        holder.textView.setBackgroundResource(ColorHelper.getRandomColor());
         holder.textView.setText(alphabet[i]);
 
         int screenHeight = ((Activity) ctx).getWindowManager()

@@ -33,6 +33,12 @@
         <activity
             android:name=".activity.ADVocabularyActivity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.FlashcardSingleActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.ADAlphabetSingleActivity"
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

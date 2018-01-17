@@ -4,31 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_ingame"
     android:orientation="vertical"
+    android:padding="@dimen/dp16"
     tools:context="com.pguese.pfcwa.activity.FlashcardActivity">
-
-    <com.pguese.pfcwa.widgets.TextViewCG
-        android:id="@+id/tvFlashcard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="@dimen/dp24"
-        android:text="Object name"
-        android:textSize="@dimen/textSizeFlashcard" />
-
-    <ImageView
-        android:id="@+id/ivFlashcard"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/container"
-        android:layout_below="@+id/tvFlashcard"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/dp16"
-        android:layout_marginRight="@dimen/dp16"
-        android:adjustViewBounds="true"
-        android:padding="@dimen/dp4" />
-
-    <!--android:background="@drawable/background_black_border"-->
 
     <LinearLayout
         android:id="@+id/container"
@@ -37,13 +16,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/dp32"
-        android:layout_marginTop="@dimen/dp16"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/ivFC1"
             android:layout_width="@dimen/flashcard_small"
             android:layout_height="@dimen/flashcard_small"
+            android:adjustViewBounds="true"
             android:background="@drawable/background_black_border"
             android:padding="@dimen/dp2" />
 
@@ -51,8 +30,9 @@
             android:id="@+id/ivFC2"
             android:layout_width="@dimen/flashcard_small"
             android:layout_height="@dimen/flashcard_small"
-            android:layout_marginLeft="@dimen/dp8"
-            android:layout_marginRight="@dimen/dp8"
+            android:layout_marginLeft="@dimen/dp16"
+            android:layout_marginRight="@dimen/dp16"
+            android:adjustViewBounds="true"
             android:background="@drawable/background_black_border"
             android:padding="@dimen/dp2" />
 
@@ -60,19 +40,40 @@
             android:id="@+id/ivFC3"
             android:layout_width="@dimen/flashcard_small"
             android:layout_height="@dimen/flashcard_small"
+            android:adjustViewBounds="true"
             android:background="@drawable/background_black_border"
             android:padding="@dimen/dp2" />
     </LinearLayout>
 
+    <com.pguese.pfcwa.widgets.TextViewCG
+        android:id="@+id/tvFlashcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="top"
+        android:text="Jj"
+        android:textSize="@dimen/textSizeFlashcard2XL" />
+
+    <ImageView
+        android:id="@+id/ivHome"
+        android:layout_width="@dimen/menu_button_default_size"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:paddingBottom="@dimen/dp16"
+        android:paddingRight="@dimen/dp16"
+        android:src="@drawable/img_home" />
+
     <ImageView
         android:id="@+id/ivBack"
         android:layout_width="@dimen/menu_button_default_size"
-        android:layout_height="@dimen/menu_button_default_size"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:padding="@dimen/menu_button_padding"
-        android:src="@drawable/img_back" />
+        android:adjustViewBounds="true"
+        android:paddingBottom="@dimen/dp8"
+        android:paddingTop="@dimen/dp8"
+        android:src="@drawable/img_back_v2" />
 
     <ImageView
         android:id="@+id/ivSpeak"
@@ -81,7 +82,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:padding="@dimen/menu_button_padding"
-        android:src="@drawable/img_speak" />
+        android:adjustViewBounds="true"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingTop="@dimen/dp16"
+        android:src="@drawable/img_speak_v2" />
 
 </RelativeLayout>

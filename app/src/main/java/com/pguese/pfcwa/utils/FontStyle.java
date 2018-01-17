@@ -10,6 +10,7 @@ import android.graphics.Typeface;
 public class FontStyle {
 
     public static Typeface centuryGothic(Context ctx) {
+//        return Typeface.createFromAsset(ctx.getAssets(), "chalkboard_bold.ttf");
         return Typeface.createFromAsset(ctx.getAssets(), "centurygothic.ttf");
     }
 }

@@ -7,7 +7,7 @@
 
     <color name="windowBackground">#fff</color>
     <color name="textColorLight">#fff</color>
-    <color name="textColorDark">#777777</color>
+    <color name="textColorDark">#000</color>
 
     <color name="colorRed">#66ff0000</color>
     <color name="colorOrange">#66ff7f00</color>
@@ -16,5 +16,12 @@
     <color name="colorBlue">#660000ff</color>
     <color name="colorIndigo">#664b0082</color>
     <color name="colorViolet">#669400d3</color>
+
+    <color name="colorLightRed">#ff5d56</color>
+    <color name="colorLightYellow">#ffc641</color>
+    <color name="colorLightGreen">#a7d200</color>
+    <color name="colorLightBlue">#3ac2ea</color>
+
+
 
 </resources>

@@ -2,11 +2,11 @@ package com.pguese.pfcwa.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.pguese.pfcwa.R;
+import com.pguese.pfcwa.data.BundleKeys;
 import com.pguese.pfcwa.widgets.ButtonCG;
 
 import butterknife.BindView;
@@ -27,7 +27,6 @@ public class ADMenuActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admenu);
         ButterKnife.bind(this);
-
     }
 
     @OnClick({R.id.btnADAlphabet, R.id.btnADVocabulary, R.id.ivBack})
@@ -37,6 +36,7 @@ public class ADMenuActivity extends BaseActivity {
                 startActivity(new Intent(this, ADAlphabetActivity.class));
                 break;
             case R.id.btnADVocabulary:
+                startActivity(new Intent(this, AlphabetActivity.class).putExtra(BundleKeys.KEY_DESTINATION, 1));
                 break;
             case R.id.ivBack:
                 super.onBackPressed();

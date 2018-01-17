@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.pguese.pfcwa.R;
-import com.pguese.pfcwa.utils.MediaPlayerHelper;
 import com.pguese.pfcwa.widgets.ButtonCG;
 
 import butterknife.BindView;
@@ -28,7 +27,7 @@ public class MenuActivity extends BaseActivity {
 //        startActivity(new Intent(this, FlashcardActivity.class));
 //        MediaPlayerHelper.playFlashcard(this, R.raw.apple, R.raw.arrow);
 
-        startActivity(new Intent(this, ADAlphabetActivity.class));
+//        startActivity(new Intent(this, ADAlphabetSingleActivity.class));
     }
 
     @OnClick({R.id.btnFC, R.id.btnAD})

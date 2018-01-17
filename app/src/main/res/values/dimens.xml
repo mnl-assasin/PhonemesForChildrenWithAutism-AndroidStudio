@@ -2,34 +2,49 @@
 <resources>
 
     <!-- 1DP : 1DP -->
+    <dimen name="ndp48">-48dp</dimen>
+    <dimen name="ndp16">-16dp</dimen>
     <dimen name="dp2">2dp</dimen>
     <dimen name="dp4">4dp</dimen>
     <dimen name="dp8">8dp</dimen>
     <dimen name="dp16">16dp</dimen>
     <dimen name="dp24">24dp</dimen>
+    <dimen name="dp30">30dp</dimen>
     <dimen name="dp32">32dp</dimen>
     <dimen name="dp48">48dp</dimen>
     <dimen name="dp64">64dp</dimen>
+    <dimen name="dp72">72dp</dimen>
     <dimen name="dp80">80dp</dimen>
     <dimen name="dp96">96dp</dimen>
-    <dimen name="dp128">126dp</dimen>
+    <dimen name="dp128">128dp</dimen>
+    <dimen name="dp160">160dp</dimen>
+    <dimen name="dp192">192dp</dimen>
     <dimen name="dp256">256dp</dimen>
 
     <!-- 1DP : 1DP -->
     <dimen name="textSizeNormal">22dp</dimen>
     <dimen name="textSizeLarge">28dp</dimen>
-    <dimen name="textSizeXL">@dimen/dp32</dimen>
+    <dimen name="textSizeXL">@dimen/dp30</dimen>
 
     <dimen name="button_default_width">280dp</dimen>
     <dimen name="button_default_height">36dp</dimen>
 
-    <dimen name="menu_button_default_size">@dimen/dp64</dimen>
+    <dimen name="menu_button_default_size">@dimen/dp72</dimen>
     <dimen name="menu_button_padding">@dimen/dp16</dimen>
 
-    <dimen name="flashcard_small">@dimen/dp80</dimen>
-    <dimen name="flashcard_medium">@dimen/dp128</dimen>
-    <dimen name="flashcard_big">@dimen/dp256</dimen>
+    <dimen name="flashcard_small">@dimen/dp96</dimen>
+    <dimen name="flashcard_medium">@dimen/dp160</dimen>
+    <dimen name="flashcard_big">@dimen/dp192</dimen>
 
-    <dimen name="textSizeFlashcard">@dimen/textSizeXL</dimen>
+    <dimen name="textSizeFlashcard">@dimen/textSizeLarge</dimen>
+    <dimen name="textSizeFlashcardMedium">40dp</dimen>
+    <dimen name="textSizeFlashcardLarge">@dimen/dp64</dimen>
+    <dimen name="textSizeFlashcardXL">@dimen/dp128</dimen>
+    <dimen name="textSizeFlashcard2XL">@dimen/dp160</dimen>
+
+    <dimen name="questionBoxSizeMedium">@dimen/dp96</dimen>
+    <dimen name="questionBoxSizeLarge">@dimen/dp128</dimen>
+    <dimen name="questionBoxSize">@dimen/dp32</dimen>
+    <dimen name="questionTextSize">@dimen/dp24 </dimen>
 
 </resources>

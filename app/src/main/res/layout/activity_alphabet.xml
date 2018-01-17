@@ -4,28 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_menu"
     tools:context="com.pguese.pfcwa.activity.AlphabetActivity">
 
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/dp64"
+        android:layout_marginBottom="@dimen/dp48"
         android:layout_marginLeft="@dimen/dp32"
         android:layout_marginRight="@dimen/dp32"
         android:layout_marginTop="@dimen/dp32"
         android:gravity="center"
-        android:horizontalSpacing="4dp"
-        android:numColumns="6"
-        android:verticalSpacing="4dp" />
+        android:numColumns="7" />
 
     <ImageView
         android:id="@+id/ivBack"
         android:layout_width="@dimen/menu_button_default_size"
-        android:layout_height="@dimen/menu_button_default_size"
-        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" 
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:padding="@dimen/menu_button_padding"
-        android:src="@drawable/img_back" />
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginLeft="@dimen/dp16"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_back_v2" />
 </RelativeLayout>
